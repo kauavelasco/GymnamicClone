@@ -12,7 +12,19 @@ class HomeContent extends StatefulWidget {
 class _HomeContentState extends State<HomeContent> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 216, 83, 60),
+        leading: Image.asset('images/Gymnamic.png'),
+        title: Text(
+          'Kauã',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+          ),
+        ),
+      ),
+      body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 25, vertical: 30),
@@ -279,9 +291,9 @@ class _HomeContentState extends State<HomeContent> {
                   padding: EdgeInsets.all(25),
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.grey[800],
+                    color: Colors.grey[900],
                     border: BoxBorder.all(
-                      color: Colors.white,
+                      color: Colors.grey,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -319,10 +331,12 @@ class _HomeContentState extends State<HomeContent> {
                     ],
                   ),
                 ),
+                SizedBox(height: 60),
               ],
             ),
           ),
         ),
-      );
+      ),
+    );
   }
 }
